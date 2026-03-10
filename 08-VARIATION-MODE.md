@@ -2,82 +2,73 @@
 
 ## The Concept
 
-Once you have ONE good image of a person holding the product correctly, use it as a reference to generate dozens of variations — different people, different settings, same product.
+Once you have ONE good image of a person holding the product correctly, use it as a seed to generate unlimited variations — different people, different settings, same product. Nano Banana Pro generates 4 images at once, so every prompt = 4 new avatars.
 
 ## The Workflow
 
 ### Step 1: Get your first good image
-Generate (or find) one image where the product looks right — correct size, correct grip, correct label. This becomes your **seed image**.
+Generate (or find) one image where the product looks right — correct size, correct grip, natural UGC style. This is your **seed image**.
 
-### Step 2: Feed the seed image back with a variation prompt
-Attach the seed image and ask for variations. The model sees the product in context and replicates it while changing the person.
+### Step 2: Attach the seed image + short variation prompt
+Keep it vague. Don't over-specify. Let the model generate variety on its own.
 
-### Step 3: Generate in batches
-Each prompt produces a new avatar holding the same product. Run it multiple times for a full set.
+### Step 3: Repeat
+Each run = 4 new avatars. Run it 5 times = 20 avatars. Cherry-pick the best.
 
-## The Variation Prompt
+## The Proven Prompt Template
 
-Attach your seed image and use this prompt:
-
-```
-Using the attached image as reference for the PRODUCT ONLY — keep the exact same product (same packaging, colors, label, size, grip style) but generate a completely different person.
-
-New person: [describe OR say "random — surprise me"]
-New setting: [describe OR say "fitting for this product's context"]
-
-Rules:
-- The product must match the attached reference exactly — same packaging, same label, same colors
-- The person must be completely different — different age, ethnicity, hair, build, clothing
-- Maintain the same candid portrait style and framing as the reference
-- The person fills 80% of the frame, product is secondary
-- No phone or camera visible in the image
-- Shot from arm's length, 23mm wide-angle perspective
-- Natural lighting appropriate to the setting
-- 9:16 vertical format
-```
-
-## Quick Variations (Even Faster)
-
-For rapid-fire variations, use short prompts after your first generation:
-
-**"Same product, different person. Make her a 40-year-old Black woman in a cozy bedroom, evening lighting."**
-
-**"Same product, different person. Make him a 28-year-old guy in a modern bathroom, morning light."**
-
-**"Same product, new avatar. Random person, random setting that fits the product."**
-
-**"Generate 4 different people holding this same product in different settings."**
-
-The seed image anchors the product — the model knows exactly what it looks like, how big it is, and how it's held. You just swap the human.
-
-## Batch Prompt (Multiple Variations at Once)
+Attach your seed image and use this:
 
 ```
-Using the attached image as the product reference, generate 4 different candid portraits of different people holding this exact same product. Each person should be:
-
-1. A different age (20s, 30s, 40s, 50s)
-2. A different ethnicity
-3. In a different setting appropriate for this product
-4. Different clothing, hair, and expression
-5. Same candid arm's length portrait style
-6. Same product — exact match to the attached reference
-7. 9:16 vertical, natural lighting, no phone visible
-
-Make each person feel like a real customer, not a model.
+Change the avatar. Change the situation fitting for this "[product type]". Same raw style as reference image. Different person, new situation, same product. [gender] [age range] avatar.
 ```
 
-## Why This Works
+### Real Example (Tested & Working):
+```
+Change the avatar. Change the situation fitting for this "bath soaks product". Same raw style as reference image. Different person, new situation, same product. Female 20-35 avatar.
+```
 
-- The model already has the product solved — correct appearance, correct scale, correct grip
-- Changing the person is the "easy" variable for the model
-- You skip all the product sizing/grip engineering on subsequent generations
-- Faster iteration: 1 good seed = unlimited variations
-- Natural diversity: different people, settings, lighting = full ad creative set
+**That's it.** Short, vague, effective. The seed image does the heavy lifting — the model copies the product, the style, and the framing while swapping the person and setting.
+
+## Why Short Prompts Work Better
+
+- Long detailed prompts make the model focus on the wrong things (product specs → product photography mode)
+- "Same raw style as reference image" locks the UGC feel without over-engineering
+- "Change the situation fitting for this [product]" lets the model pick contextually appropriate settings
+- The model generates more natural variety when it has creative freedom
+
+## Variations You Can Run
+
+**Different demographics:**
+```
+Change the avatar. Same product, same raw style. Male 30-45 avatar. New fitting situation.
+```
+
+**Different age range:**
+```
+Change the avatar. Same product, same raw style. Female 40-55 avatar. New fitting situation.
+```
+
+**Multiple at once (batch diversity):**
+```
+Change the avatar. Same product, same raw style. Each avatar should be a completely different person — different age, ethnicity, and setting. Mix of genders.
+```
+
+**Specific setting:**
+```
+Change the avatar. Same product, same raw style. Female 25-35 avatar. Morning kitchen setting.
+```
+
+**Keep it loose for maximum variety:**
+```
+New avatar. Same product. Same style. Surprise me.
+```
 
 ## Tips
 
-- **Save your best seed image** for each product. It's your master reference.
-- **If the product drifts** (changes color, shape, or label), go back to the seed image and re-attach it
-- **Mix settings**: bathroom, bedroom, kitchen, living room, outdoor — each setting gives a different ad angle
-- **Mix expressions**: some people excited about the product, some casual, some mid-conversation
-- **Don't over-specify**: shorter variation prompts often produce more natural results than detailed ones
+- **Save your best seed image** for each product — it's your master reference
+- **If the product drifts** (colors change, wrong shape), go back to the original seed
+- **Cherry-pick aggressively** — out of every 4 generations, usually 1-2 are great, 1 is usable, 1 is off
+- **The shorter the prompt, the more natural the output** — resist the urge to add details
+- **Run the same prompt multiple times** — you'll get different results each time
+- **"Same raw style"** is the magic phrase — it anchors the UGC selfie aesthetic from your seed
