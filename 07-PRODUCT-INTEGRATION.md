@@ -6,17 +6,39 @@
 
 Text descriptions like "green powder supplement jar" produce generic, wrong-colored, wrong-shaped bottles that instantly read as AI. The reference image does the heavy lifting — your prompt just describes HOW the avatar holds it and WHERE it sits in frame.
 
-## The 2-Step Process
+## The Workflow
 
 ### Step 1: Generate your avatar (standalone, no product)
 Use the prompts from `02-ARCHETYPES.md`. Get a clean avatar you're happy with. Save it.
 
-### Step 2: Generate avatar + product (attach BOTH images)
-Attach:
-1. **Your saved avatar image** (as character reference)
-2. **A real photo of the product** (the actual product, not a mockup)
+### Step 2: Give me the product URL
+Paste the product page URL (brand website, Amazon, etc.). I will:
+1. **Read the page** and extract: product name, dimensions (height, width, weight), material, container type, cap/lid type, label description, color scheme
+2. **Find the best product image** from the page for you to download and attach
+3. **Auto-generate the complete avatar + product prompt** with all physical properties, grip physics, and scale references pre-filled
 
-Then prompt with the product physics block below.
+### Step 3: Generate avatar + product
+Take the prompt I generated and paste it into Nano Banana Pro with TWO attached images:
+1. **Your saved avatar image** (character reference)
+2. **The product image** (downloaded from the URL I found)
+
+That's it. URL in → prompt out → paste with images → done.
+
+## What I Extract From Product URLs
+
+When you give me a product URL, I pull:
+
+| Detail | Where I Find It | How It's Used |
+|---|---|---|
+| Container type | Product description / images | Determines grip template (bottle vs pouch vs box) |
+| Height & width | Specs section / Amazon details | Exact measurements in prompt + body-relative scale |
+| Material | Product description | Affects how light interacts (glossy vs matte vs translucent) |
+| Weight | Specs section | Determines "weight feel" for realistic grip tension |
+| Cap/lid type | Product images | Affects how top of product looks when held |
+| Label colors | Product images | Described by appearance for content policy compliance |
+| Container shape | Product images | Cylindrical, rectangular, pouch — changes finger placement |
+
+If I can't find exact dimensions on the page, I estimate based on standard industry sizes (see quick reference below) and tell you what I assumed.
 
 ## Product Physics Block
 
@@ -153,6 +175,21 @@ Real selfies often partially obscure the label. It's more authentic when:
 | Mid-pour/scoop | Action shot | "Subject mid-action scooping from open container, spoon/scoop in one hand, jar in the other" |
 | Tucked in hand, low | Casual mention | "Product held loosely at waist level in non-dominant hand, almost an afterthought in the frame" |
 | Held up to camera | "Look at this" | "Product held up near face level, arm partially extended, showing label to camera" |
+
+## Industry Standard Sizes (Fallback When Specs Unavailable)
+
+| Product Type | Typical Height | Typical Width | Typical Weight | Examples |
+|---|---|---|---|---|
+| Capsule bottle (30-60ct) | 4-5" | 2-2.5" dia | 3-6 oz | Seed, Ritual, Athletic Greens capsules |
+| Capsule bottle (90-120ct) | 5-6" | 2.5-3" dia | 6-10 oz | Garden of Life, NOW Foods |
+| Powder canister (small) | 6-7" | 3.5-4" dia | 8-12 oz | AG1 canister, small protein |
+| Powder canister (large) | 9-11" | 5-6" dia | 2-5 lbs | Protein powder tubs |
+| Powder pouch/bag | 8-12" tall | 5-7" wide | 8 oz - 2 lbs | AG1 travel, protein bags |
+| Gummy bottle | 4-5" | 2.5-3" dia | 4-8 oz | Olly, SmartyPants, Goli |
+| Liquid dropper bottle | 4-5" | 1.5-2" dia | 1-2 oz | Tinctures, liquid vitamins |
+| Single-serve packet | 5-6" tall | 3-4" wide | 0.5-1 oz | Stick packs, sachets |
+| Rigid box (test kit) | 4-8" | 3-6" wide | 4-12 oz | Everlywell, at-home kits |
+| Tube (cream/gel) | 5-7" | 1.5-2" dia | 2-4 oz | Topicals, gels |
 
 ## Example: Full Avatar + Product Prompt
 

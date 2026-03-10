@@ -122,6 +122,36 @@ When asked to quickly generate avatars without a detailed brief, use this stream
 3. Pick lighting from `03-LIGHTING-LIBRARY.md`
 4. Output the complete hybrid prompt ready to paste
 
+## Product URL → Auto-Prompt Mode
+
+When the user pastes a **product URL** (brand website, Amazon, etc.):
+
+1. **Read the page** and extract:
+   - Product name and type (bottle, pouch, box, etc.)
+   - Physical dimensions (height, width, diameter)
+   - Material and finish (plastic, glass, matte pouch, glossy, translucent)
+   - Weight
+   - Cap/lid type
+   - Container shape
+   - Label colors and design description
+
+2. **Find the best product image** on the page — recommend the user download it to attach
+
+3. **Auto-generate the complete avatar + product prompt** with:
+   - All physical properties filled in from the page data
+   - Grip and hand placement matched to the container type (see `07-PRODUCT-INTEGRATION.md` templates)
+   - Scale references relating product size to the avatar's body (hand width, forearm length)
+   - Fingerprint smudges, label wear, and handling marks for realism
+   - Content-policy-safe product description (by appearance, not function)
+
+4. **Tell the user** to paste the prompt into Nano Banana Pro with two attached images:
+   - Their saved avatar image (character reference)
+   - The product image (downloaded from the link you found)
+
+If dimensions are not on the page, estimate from the industry standard sizes table in `07-PRODUCT-INTEGRATION.md` and note what you assumed.
+
+**Important**: Always describe the product by PHYSICAL APPEARANCE in the prompt (e.g., "matte green canister with white cap, 7 inches tall"), never by function (e.g., "greens supplement"). Content policy blocks health/medical language.
+
 ## Quality Gate
 
 Before presenting any prompt:
