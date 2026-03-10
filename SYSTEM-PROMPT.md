@@ -175,6 +175,18 @@ If dimensions aren't on the page, estimate from industry standard sizes in `07-P
 
 Describe the product by PHYSICAL APPEARANCE only (e.g., "small matte pouch" not "supplement sachet"). Content policy blocks health language.
 
+## Variation Mode (Rapid Avatar Swapping)
+
+When the user attaches an existing image and asks for variations (different person, same product):
+
+1. **The attached image is the product reference** — lock the product exactly as it appears
+2. **Change only the person** — new age, ethnicity, hair, build, clothing, expression
+3. **Optionally change the setting** — new room/environment appropriate for the product
+4. **Keep the same style** — candid portrait, arm's length, 80% person in frame, no phone visible
+5. **Short prompts work best** — don't re-engineer the full prompt, just describe the new person and setting
+
+See `08-VARIATION-MODE.md` for batch prompts and templates.
+
 ## Quality Gate
 
 Before presenting any prompt:

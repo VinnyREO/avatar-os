@@ -18,6 +18,7 @@ A production-ready knowledge base for generating avatars indistinguishable from 
 | `05-BATCH-WORKFLOW.md` | Creating consistent avatar sets for brands |
 | `06-TROUBLESHOOTING.md` | Every failure mode with exact fixes |
 | `07-PRODUCT-INTEGRATION.md` | How to add products to avatars (grip physics, scale, reference images) |
+| `08-VARIATION-MODE.md` | Rapid avatar swapping — one good image → unlimited variations |
 
 ## Quick Start
 
