@@ -126,27 +126,40 @@ When asked to quickly generate avatars without a detailed brief, use this stream
 
 When the user pastes a **product URL** (with optional avatar preferences like age, gender, vibe):
 
-1. **Read the product page** and extract: product name, container type, dimensions, material, finish, weight, cap type, label colors, container shape
+1. **Read the product page** and extract: container type, dimensions, material, weight
+2. **Pick the best product image** — tell the user which to download and attach
+3. **Pick archetype** from `02-ARCHETYPES.md` based on product category
+4. **Generate ONE complete prompt** following the rules below
+5. **Tell the user**: paste prompt into Nano Banana Pro with product image attached → done
 
-2. **Pick the best product image** from the page — tell the user which one to download and attach
+### CRITICAL: Product Prompt Rules (learned from failures)
 
-3. **Pick the right archetype** from `02-ARCHETYPES.md` based on the product category (or use the user's preference if specified)
+Nano Banana Pro will default to "product lifestyle photography" if the product gets too much attention in the prompt. Follow these rules:
 
-4. **Generate ONE complete prompt** that creates the avatar AND shows them holding the product — everything in a single Nano Banana Pro generation:
-   - Full avatar description (person, skin, hair, expression, clothing)
-   - Selfie arm biomechanics and camera forensics
-   - Product grip physics matched to container type (which fingers where, hand tension)
-   - Product scale relative to the person's body
-   - Handling marks (fingerprints, powder residue, label wear)
-   - This critical line: **"Render the product EXACTLY as shown in the attached reference image. Do not modify, redesign, or reinterpret any aspect — preserve exact colors, label, branding, shape, cap, and finish."**
-   - Lighting and environment matched to product category
-   - Semantic negative constraints
+**Rule 1: PERSON FIRST, PRODUCT LAST.** The product description goes at the very END of the prompt, AFTER all person/skin/hair/lighting details. Keep it short — 2-3 sentences max. The person is 90% of the prompt, the product is 10%.
 
-5. **Tell the user**: paste this prompt into Nano Banana Pro with the product image attached → done
+**Rule 2: MINIMAL PRODUCT DESCRIPTION.** Do NOT over-describe the product. The attached reference image handles appearance. Your text only covers: size relative to hand, how it's held, and one line about handling marks. That's it.
 
-If dimensions aren't on the page, estimate from the industry standard sizes table in `07-PRODUCT-INTEGRATION.md` and note your assumption.
+**Rule 3: PRODUCT IS SECONDARY.** Explicitly state: "The person is the primary subject. The product is a secondary element held casually in their hand — it should feel like an afterthought, not the focus."
 
-**Critical**: Describe the product by PHYSICAL APPEARANCE only (e.g., "matte green cylindrical container with white screw cap, 7 inches tall"). Never by function ("greens supplement"). Content policy blocks health language.
+**Rule 4: NO SEPARATE PRODUCT JSON BLOCK.** Do NOT put product details in their own structured section. Weave the product into the subject_and_pose description as part of what the person is doing. A separate product section signals "this is a product shoot" to the model.
+
+**Rule 5: KEEP THE SELFIE FRAME.** Always emphasize: "This is a midshot selfie of a PERSON. Framing: head, shoulders, upper chest, one hand holding a small object. The person fills 80% of the frame."
+
+**Bad prompt structure (causes product photography):**
+```
+subject_and_pose: "person..."
+product_integration: { detailed product specs... }
+```
+
+**Good prompt structure (keeps it a selfie):**
+```
+subject_and_pose: "person... Left hand loosely holding a small [container type] at chest level — about [X] inches tall, fits in one hand. Product exactly matches attached reference image, do not modify. Fingers partially obscure the label. Slight fingerprint smudges on surface."
+```
+
+If dimensions aren't on the page, estimate from industry standard sizes in `07-PRODUCT-INTEGRATION.md`.
+
+Describe the product by PHYSICAL APPEARANCE only (e.g., "small matte pouch" not "supplement sachet"). Content policy blocks health language.
 
 ## Quality Gate
 

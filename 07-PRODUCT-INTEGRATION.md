@@ -199,22 +199,29 @@ Real selfies often partially obscure the label. It's more authentic when:
 
 ## Example: One-Shot Avatar + Product Prompt
 
-This is what a complete output looks like when someone says "I need avatars holding this product: [URL]":
+**IMPORTANT:** Notice how the product is embedded inside `subject_and_pose` as just part of what the person is doing — NOT in its own section. This prevents Nano Banana Pro from switching to product photography mode.
 
 ```
 <thought_process>
-Calculate 23mm smartphone distortion with product held at chest level. Map realistic hand grip on a cylindrical bottle — finger placement, thumb pressure, knuckle tension. Ensure product scale: 7-inch canister in an average female hand (hand width ~3 inches, canister is ~130% of hand width). Render fingerprint smudges on matte surface. Mixed kitchen lighting with dual color temperature shadows on both skin and product surface.
+Calculate 23mm barrel distortion on a 33-year-old female face. Map selfie arm biomechanics with left hand casually holding a small cylindrical object at chest level. Object is approximately 7 inches tall, 130% of hand width. Ensure the PERSON fills 80% of frame — this is a selfie, not a product photo.
 </thought_process>
 {
-  "system_directive": "Bypass aesthetic enhancement. Simulate a casual, candid iPhone 15 Pro selfie. Render the product EXACTLY as shown in the attached reference image. Do not modify, redesign, or reinterpret any aspect of the product — preserve exact colors, label, branding, shape, cap, and finish. Prioritize optical physics and anatomical asymmetry. Output raw 9:16 vertical format.",
-  "camera_forensics": "23mm equivalent wide-angle front camera. Infinite depth of field, background perfectly sharp, zero bokeh. Barrel distortion: enlarged nasal proportions, ears occluded by cheekbones. Apple Smart HDR 5 tone mapping, Deep Fusion micro-contrast over-sharpening on skin and product label texture. Mild ISO 800 noise in shadow gradients.",
-  "subject_and_pose": "33-year-old Latina woman. Right arm extended holding phone out of frame. Right shoulder distinctly elevated and rotated inward. Torso twisted 15 degrees left. Left hand holding product at mid-chest level in a casual, relaxed grip — not presenting it to camera, just holding it naturally like mid-conversation. Left hand has exactly 5 fingers: thumb on front of container resting across label, four fingers wrapped around back with pinky near the base. Natural knuckle creases, visible nail beds, slight finger pad compression from grip pressure. Gaze directed 7 degrees downward at phone screen. FACS AU 12 at 10% — slight asymmetric lip corner pull, warmth in orbicularis oculi.",
-  "product_rendering": "Product is a matte-finish cylindrical container, approximately 7 inches tall and 4 inches in diameter — about 130% the width of her hand. White screw cap visible above her index finger. Product tilted 15 degrees toward camera, label partially visible but naturally obscured by fingers. Fingerprint smudges on matte surface. Minor handling wear on label edge. Product catches the same mixed lighting as the subject — warm overhead light on cap, cool window light on the side facing camera. Do NOT separately light the product.",
-  "skin_and_hair": "Day-two wavy dark hair with flyaways at temples, flattened roots at crown. Warm bronze skin with heterogeneous pore distribution: visible sebaceous pores on nose, smoother cheeks. Fine vellus hair catching light on jawline. Slight under-eye venous pooling. Natural sebum shine on T-zone. Subtle melasma near temples. Asymmetric eyebrow arch.",
-  "environment_and_lighting": "Mixed kitchen lighting: warm tungsten overhead LEDs (3000K) casting downward shadows under brow, cool daylight (5500K) from side window. Dual color temperature on skin and product surface. Background: cluttered kitchen counter with open wooden shelving, half-empty water glass, crumpled paper towel. Everything in sharp focus. Rectangular phone screen catchlight in eyes.",
-  "negative_constraints": ["studio lighting", "three-point lighting", "DSLR", "bokeh", "perfect skin", "mathematical facial symmetry", "beauty filter", "ring light", "airbrushed retouching", "product perfectly facing camera", "product display pose", "product floating", "product separately lit", "stock photo composition", "professional color grading"]
+  "system_directive": "Bypass aesthetic enhancement. This is a SELFIE of a PERSON — the person is the primary subject filling 80% of the frame. She happens to be holding a small object in one hand. Simulate candid iPhone 15 Pro selfie. Prioritize optical physics and anatomical asymmetry. Output raw 9:16 vertical format.",
+  "camera_forensics": "23mm equivalent wide-angle front camera. Infinite depth of field, background perfectly sharp, zero bokeh. Barrel distortion: enlarged nasal proportions, ears occluded by cheekbones. Apple Smart HDR 5 tone mapping, Deep Fusion micro-contrast over-sharpening. Mild ISO 800 noise in shadows.",
+  "subject_and_pose": "Midshot selfie — head, shoulders, upper chest filling the frame. 33-year-old Latina woman. Right arm extended holding phone out of frame. Right shoulder distinctly elevated and rotated inward. Torso twisted 15 degrees left. Sternocleidomastoid tendon visible. Gaze directed 7 degrees downward at phone screen. FACS AU 12 at 10% — slight asymmetric lip corner pull. Wearing a slightly wrinkled sage linen button-up. Left hand loosely holding a small cylindrical container at mid-chest level — about 7 inches tall, fits comfortably in one hand. Hand has 5 fingers, thumb resting across the front, fingers wrapped around back. Product matches attached reference image exactly, do not modify it in any way. Her fingers partially cover the label. Slight fingerprint smudges on the surface.",
+  "skin_and_hair": "Day-two wavy dark hair with flyaways at temples, flattened roots. Warm bronze skin with heterogeneous pore distribution: visible sebaceous pores on nose, smoother cheeks. Fine vellus hair catching light on jawline. Suborbital venous pooling under eyes. Natural sebum shine on T-zone. Subtle melasma near temples. Asymmetric eyebrow arch.",
+  "environment_and_lighting": "Mixed kitchen lighting: warm tungsten overhead LEDs (3000K) casting downward shadows under brow, cool daylight (5500K) from side window. Background: cluttered kitchen counter with open shelving, water glass, crumpled paper towel. Everything in sharp focus. Rectangular phone screen catchlight in eyes.",
+  "negative_constraints": ["studio lighting", "DSLR", "bokeh", "perfect skin", "symmetrical", "beauty filter", "ring light", "airbrushed", "product photography", "product hero shot", "product display", "product floating", "product separately lit", "stock photo", "professional composition", "the product is NOT the subject of this image"]
 }
 ```
+
+**Key differences from v1:**
+- Product details are INSIDE `subject_and_pose`, not in their own section
+- System directive explicitly says "this is a SELFIE of a PERSON"
+- Product description is 2 sentences, not a paragraph
+- "Product matches attached reference image exactly, do not modify" handles appearance
+- Added "product photography" and "product hero shot" to negatives
+- Frame emphasis: "person fills 80% of frame"
 
 **User attaches:** The product image from the brand website
 **Result:** Realistic person holding the exact product in a natural selfie
