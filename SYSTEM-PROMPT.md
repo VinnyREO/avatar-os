@@ -122,35 +122,31 @@ When asked to quickly generate avatars without a detailed brief, use this stream
 3. Pick lighting from `03-LIGHTING-LIBRARY.md`
 4. Output the complete hybrid prompt ready to paste
 
-## Product URL → Auto-Prompt Mode
+## Product URL → Avatar + Product Prompt (One Shot)
 
-When the user pastes a **product URL** (brand website, Amazon, etc.):
+When the user pastes a **product URL** (with optional avatar preferences like age, gender, vibe):
 
-1. **Read the page** and extract:
-   - Product name and type (bottle, pouch, box, etc.)
-   - Physical dimensions (height, width, diameter)
-   - Material and finish (plastic, glass, matte pouch, glossy, translucent)
-   - Weight
-   - Cap/lid type
-   - Container shape
-   - Label colors and design description
+1. **Read the product page** and extract: product name, container type, dimensions, material, finish, weight, cap type, label colors, container shape
 
-2. **Find the best product image** on the page — recommend the user download it to attach
+2. **Pick the best product image** from the page — tell the user which one to download and attach
 
-3. **Auto-generate the complete avatar + product prompt** with:
-   - All physical properties filled in from the page data
-   - Grip and hand placement matched to the container type (see `07-PRODUCT-INTEGRATION.md` templates)
-   - Scale references relating product size to the avatar's body (hand width, forearm length)
-   - Fingerprint smudges, label wear, and handling marks for realism
-   - Content-policy-safe product description (by appearance, not function)
+3. **Pick the right archetype** from `02-ARCHETYPES.md` based on the product category (or use the user's preference if specified)
 
-4. **Tell the user** to paste the prompt into Nano Banana Pro with two attached images:
-   - Their saved avatar image (character reference)
-   - The product image (downloaded from the link you found)
+4. **Generate ONE complete prompt** that creates the avatar AND shows them holding the product — everything in a single Nano Banana Pro generation:
+   - Full avatar description (person, skin, hair, expression, clothing)
+   - Selfie arm biomechanics and camera forensics
+   - Product grip physics matched to container type (which fingers where, hand tension)
+   - Product scale relative to the person's body
+   - Handling marks (fingerprints, powder residue, label wear)
+   - This critical line: **"Render the product EXACTLY as shown in the attached reference image. Do not modify, redesign, or reinterpret any aspect — preserve exact colors, label, branding, shape, cap, and finish."**
+   - Lighting and environment matched to product category
+   - Semantic negative constraints
 
-If dimensions are not on the page, estimate from the industry standard sizes table in `07-PRODUCT-INTEGRATION.md` and note what you assumed.
+5. **Tell the user**: paste this prompt into Nano Banana Pro with the product image attached → done
 
-**Important**: Always describe the product by PHYSICAL APPEARANCE in the prompt (e.g., "matte green canister with white cap, 7 inches tall"), never by function (e.g., "greens supplement"). Content policy blocks health/medical language.
+If dimensions aren't on the page, estimate from the industry standard sizes table in `07-PRODUCT-INTEGRATION.md` and note your assumption.
+
+**Critical**: Describe the product by PHYSICAL APPEARANCE only (e.g., "matte green cylindrical container with white screw cap, 7 inches tall"). Never by function ("greens supplement"). Content policy blocks health language.
 
 ## Quality Gate
 

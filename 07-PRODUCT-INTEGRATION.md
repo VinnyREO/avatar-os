@@ -1,44 +1,50 @@
 # 07 — Product Integration (Avatar + Product)
 
-## The Golden Rule
-
-**Never describe a product in text. Always attach a reference photo.**
-
-Text descriptions like "green powder supplement jar" produce generic, wrong-colored, wrong-shaped bottles that instantly read as AI. The reference image does the heavy lifting — your prompt just describes HOW the avatar holds it and WHERE it sits in frame.
-
 ## The Workflow
 
-### Step 1: Generate your avatar (standalone, no product)
-Use the prompts from `02-ARCHETYPES.md`. Get a clean avatar you're happy with. Save it.
+**One step. One image. One prompt.**
 
-### Step 2: Give me the product URL
-Paste the product page URL (brand website, Amazon, etc.). I will:
-1. **Read the page** and extract: product name, dimensions (height, width, weight), material, container type, cap/lid type, label description, color scheme
-2. **Find the best product image** from the page for you to download and attach
-3. **Auto-generate the complete avatar + product prompt** with all physical properties, grip physics, and scale references pre-filled
+You give me:
+1. A **product URL** (brand website or Amazon)
+2. What kind of **person** you want (age, gender, vibe — or just the product category and I'll pick the right archetype)
 
-### Step 3: Generate avatar + product
-Take the prompt I generated and paste it into Nano Banana Pro with TWO attached images:
-1. **Your saved avatar image** (character reference)
-2. **The product image** (downloaded from the URL I found)
+I give you:
+1. A **complete prompt** with the avatar AND product combined — ready to paste
+2. Which **product image** to download and attach
 
-That's it. URL in → prompt out → paste with images → done.
+You paste the prompt into Nano Banana Pro with the product image attached → get a realistic person holding the real product.
+
+**That's it.** No 2-step process. No separate avatar generation. One shot.
 
 ## What I Extract From Product URLs
 
-When you give me a product URL, I pull:
+When you give me a product URL, I read the page and pull:
 
-| Detail | Where I Find It | How It's Used |
-|---|---|---|
-| Container type | Product description / images | Determines grip template (bottle vs pouch vs box) |
-| Height & width | Specs section / Amazon details | Exact measurements in prompt + body-relative scale |
-| Material | Product description | Affects how light interacts (glossy vs matte vs translucent) |
-| Weight | Specs section | Determines "weight feel" for realistic grip tension |
-| Cap/lid type | Product images | Affects how top of product looks when held |
-| Label colors | Product images | Described by appearance for content policy compliance |
-| Container shape | Product images | Cylindrical, rectangular, pouch — changes finger placement |
+| Detail | How It's Used in the Prompt |
+|---|---|
+| Container type (bottle/pouch/box) | Determines grip template — which fingers go where |
+| Height & width | Exact measurements + body-relative scale ("80% of hand width") |
+| Material (plastic/glass/matte/glossy) | How light interacts with the surface, fingerprint visibility |
+| Weight | Grip tension — light products held loosely, heavy ones gripped firmly |
+| Cap/lid type | What peeks above the fingers when held |
+| Label colors & design | Described by appearance only (content policy safe) |
+| Container shape | Cylindrical vs rectangular vs flexible — changes hand wrap |
 
-If I can't find exact dimensions on the page, I estimate based on standard industry sizes (see quick reference below) and tell you what I assumed.
+If dimensions aren't on the page, I estimate from industry standard sizes (see table below) and note my assumption.
+
+## The Golden Rules
+
+1. **Product image does the heavy lifting.** The attached reference photo shows what the product looks like. The text prompt describes HOW it's held and HOW BIG it is. Never describe the product's appearance in text — always reference the attached image.
+
+2. **"Render the product EXACTLY as shown in the attached reference image. Do not modify, redesign, or reinterpret any aspect of the product — preserve exact colors, label, branding, shape, cap, and finish."** ← This line goes in every prompt.
+
+3. **Describe by appearance, not function.** Content policy blocks health language.
+   - ❌ "supplement bottle" → ✅ "matte green cylindrical container with white screw cap"
+   - ❌ "protein powder" → ✅ "large flexible pouch with colorful label"
+
+4. **Specify 5 fingers.** AI hands need this explicitly.
+
+5. **Add handling marks.** Fingerprint smudges, slight powder residue, minor label wear = realism.
 
 ## Product Physics Block
 
@@ -191,19 +197,24 @@ Real selfies often partially obscure the label. It's more authentic when:
 | Rigid box (test kit) | 4-8" | 3-6" wide | 4-12 oz | Everlywell, at-home kits |
 | Tube (cream/gel) | 5-7" | 1.5-2" dia | 2-4 oz | Topicals, gels |
 
-## Example: Full Avatar + Product Prompt
+## Example: One-Shot Avatar + Product Prompt
+
+This is what a complete output looks like when someone says "I need avatars holding this product: [URL]":
 
 ```
 <thought_process>
-Calculate 23mm smartphone distortion with product held at chest level. Map realistic hand grip on a cylindrical bottle — finger placement, thumb pressure, knuckle tension. Ensure product scale matches: 6-inch bottle in an average female hand (hand width ~3 inches). Render fingerprint smudges on glossy bottle surface.
+Calculate 23mm smartphone distortion with product held at chest level. Map realistic hand grip on a cylindrical bottle — finger placement, thumb pressure, knuckle tension. Ensure product scale: 7-inch canister in an average female hand (hand width ~3 inches, canister is ~130% of hand width). Render fingerprint smudges on matte surface. Mixed kitchen lighting with dual color temperature shadows on both skin and product surface.
 </thought_process>
 {
-  "system_directive": "Bypass aesthetic enhancement. Simulate candid iPhone 15 Pro selfie of person holding a product. Use ATTACHED PRODUCT IMAGE for exact product appearance. Prioritize optical physics. 9:16 vertical.",
-  "camera_forensics": "23mm wide-angle front camera. Infinite DOF, zero bokeh. Barrel distortion. Smart HDR 5. Deep Fusion over-sharpening. ISO 800 noise in shadows.",
-  "subject_and_pose": "33-year-old woman from attached avatar reference. Right arm extended holding phone out of frame. Left hand holding product at mid-chest level — casual display grip, not posed. Left fingers wrapped around bottle body, thumb resting on label, pinky supporting the base. Hand has exactly 5 fingers with natural knuckle creases. Right shoulder elevated from selfie arm. Torso twisted. Gaze 7 degrees down at phone screen. FACS AU 12 at 10% — subtle pleased expression.",
-  "product_rendering": "Render product EXACTLY as shown in attached reference image. Do not modify colors, label, or branding. Product is a 6-inch tall cylindrical bottle, about 80% the width of her hand. Tilted 15 degrees toward camera. Fingerprint smudges on glossy surface. Minor label wear from handling. Product partially obscured by fingers — this is natural, don't force full label visibility.",
-  "skin_and_hair": "[from original avatar prompt]",
-  "environment_and_lighting": "[from original avatar prompt]",
-  "negative_constraints": ["studio lighting", "DSLR", "bokeh", "perfect skin", "symmetrical", "beauty filter", "product perfectly facing camera", "product display pose", "product floating", "product separately lit", "ring light"]
+  "system_directive": "Bypass aesthetic enhancement. Simulate a casual, candid iPhone 15 Pro selfie. Render the product EXACTLY as shown in the attached reference image. Do not modify, redesign, or reinterpret any aspect of the product — preserve exact colors, label, branding, shape, cap, and finish. Prioritize optical physics and anatomical asymmetry. Output raw 9:16 vertical format.",
+  "camera_forensics": "23mm equivalent wide-angle front camera. Infinite depth of field, background perfectly sharp, zero bokeh. Barrel distortion: enlarged nasal proportions, ears occluded by cheekbones. Apple Smart HDR 5 tone mapping, Deep Fusion micro-contrast over-sharpening on skin and product label texture. Mild ISO 800 noise in shadow gradients.",
+  "subject_and_pose": "33-year-old Latina woman. Right arm extended holding phone out of frame. Right shoulder distinctly elevated and rotated inward. Torso twisted 15 degrees left. Left hand holding product at mid-chest level in a casual, relaxed grip — not presenting it to camera, just holding it naturally like mid-conversation. Left hand has exactly 5 fingers: thumb on front of container resting across label, four fingers wrapped around back with pinky near the base. Natural knuckle creases, visible nail beds, slight finger pad compression from grip pressure. Gaze directed 7 degrees downward at phone screen. FACS AU 12 at 10% — slight asymmetric lip corner pull, warmth in orbicularis oculi.",
+  "product_rendering": "Product is a matte-finish cylindrical container, approximately 7 inches tall and 4 inches in diameter — about 130% the width of her hand. White screw cap visible above her index finger. Product tilted 15 degrees toward camera, label partially visible but naturally obscured by fingers. Fingerprint smudges on matte surface. Minor handling wear on label edge. Product catches the same mixed lighting as the subject — warm overhead light on cap, cool window light on the side facing camera. Do NOT separately light the product.",
+  "skin_and_hair": "Day-two wavy dark hair with flyaways at temples, flattened roots at crown. Warm bronze skin with heterogeneous pore distribution: visible sebaceous pores on nose, smoother cheeks. Fine vellus hair catching light on jawline. Slight under-eye venous pooling. Natural sebum shine on T-zone. Subtle melasma near temples. Asymmetric eyebrow arch.",
+  "environment_and_lighting": "Mixed kitchen lighting: warm tungsten overhead LEDs (3000K) casting downward shadows under brow, cool daylight (5500K) from side window. Dual color temperature on skin and product surface. Background: cluttered kitchen counter with open wooden shelving, half-empty water glass, crumpled paper towel. Everything in sharp focus. Rectangular phone screen catchlight in eyes.",
+  "negative_constraints": ["studio lighting", "three-point lighting", "DSLR", "bokeh", "perfect skin", "mathematical facial symmetry", "beauty filter", "ring light", "airbrushed retouching", "product perfectly facing camera", "product display pose", "product floating", "product separately lit", "stock photo composition", "professional color grading"]
 }
 ```
+
+**User attaches:** The product image from the brand website
+**Result:** Realistic person holding the exact product in a natural selfie
