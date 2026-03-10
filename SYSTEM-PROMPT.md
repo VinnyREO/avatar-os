@@ -34,7 +34,7 @@ Calculate realistic 23mm smartphone lens distortion at 18 inches. Map asymmetric
 ### 2. System Directive
 Override the model's perfection bias:
 ```json
-"system_directive": "Bypass aesthetic enhancement. Simulate a casual, candid iPhone 15 Pro selfie. Prioritize optical physics and anatomical asymmetry over aesthetic perfection. Output raw 9:16 vertical format."
+"system_directive": "Bypass aesthetic enhancement. This is a SELFIE — a photo taken by the subject's own front-facing phone camera at arm's length. The phone is the camera and is NEVER visible in the image. The person is the primary subject filling 80% of the frame. They are NOT using or demonstrating any product — they are simply taking a selfie while casually holding an object. Prioritize optical physics and anatomical asymmetry over aesthetic perfection. Output raw 9:16 vertical format."
 ```
 
 ### 3. Camera Forensics (Always Include)
@@ -45,12 +45,14 @@ These are the real iPhone 15 Pro front camera specs:
 
 ### 4. Subject & Pose
 Describe the person with the selfie arm biomechanics:
-- Right arm extended holding phone out of frame
-- Right shoulder elevated and rotated inward
+- Right arm extended BELOW THE FRAME — the phone is the camera taking this photo, it is NEVER visible in the image
+- Right shoulder elevated and rotated inward (from holding the phone that takes this photo)
 - Torso twisted 15° off-axis
 - Head tilted 5° to compensate
 - Sternocleidomastoid neck tendon visible on one side
-- Gaze directed 7° downward at phone screen (NOT at lens)
+- Gaze directed 7° downward toward the phone camera (NOT at lens, NOT at a phone in the image — there is no phone in the image)
+
+**CRITICAL: The phone is the camera. It does not exist in the image. No phone is visible anywhere. The right hand holding the phone is below the frame crop. This is shot FROM the phone's perspective.**
 
 ### 5. Skin & Hair
 Use clinical/dermatological terminology to bypass perfection filters:
@@ -81,7 +83,15 @@ Use semantic exclusion in JSON format:
   "DSLR 85mm lens compression",
   "airbrushed high-end beauty retouching",
   "beauty filters",
-  "stock photo posture"
+  "stock photo posture",
+  "phone visible in the image",
+  "person holding a phone",
+  "mirror selfie",
+  "product in use",
+  "product demonstration",
+  "product lifestyle photography",
+  "person using the product",
+  "product being applied or opened"
 ]
 ```
 
@@ -112,6 +122,8 @@ Never write "happy" or "surprised." Use Facial Action Coding System units at low
 | Clean background | "Slightly cluttered background: half-empty glass, crumpled paper towel, open cabinet" |
 | Centered composition | "Slightly off-center amateur composition, top of head slightly cropped" |
 | Relaxed shoulders | "Selfie arm biomechanics: elevated right shoulder, torso twist, neck tendon visible" |
+| Phone visible in frame | "The phone IS the camera — it is never visible. Right hand holding phone is cropped out below frame" |
+| Product-in-use scene | "Person is posing for a selfie, NOT using/demonstrating the product. They simply hold it." |
 
 ## Quick Generate Mode
 
