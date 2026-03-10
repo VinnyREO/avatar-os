@@ -1,39 +1,37 @@
 # Avatar OS
 
-Photorealistic AI avatar generation system for UGC advertising. One prompt, one real-looking person.
+Photorealistic AI avatar generation system optimized for **Nano Banana Pro** (Gemini 3 Pro Image). Built for UGC advertising.
 
 ## What This Is
 
-A focused knowledge base for generating avatars that look like real iPhone selfies — not AI art. Built for DTC health and supplement brands but works for any product category.
+A production-ready knowledge base for generating avatars indistinguishable from real iPhone selfies. Uses hybrid structured prompting, iPhone camera forensics, FACS-based expressions, and clinical skin terminology to defeat Nano Banana Pro's perfection bias.
 
 ## Files
 
 | File | Purpose |
 |------|---------|
-| `SYSTEM-PROMPT.md` | Project instructions — paste this into the Claude Project system prompt |
-| `01-PHOTOREALISM-GUIDE.md` | Deep dive on what makes images look real vs AI |
-| `02-ARCHETYPES.md` | Avatar archetypes matched to product categories with full example prompts |
-| `03-NEGATIVE-PROMPTS.md` | Master negative prompt library and category-specific additions |
-| `04-BATCH-WORKFLOW.md` | How to create consistent avatar sets for brands |
-| `05-TROUBLESHOOTING.md` | Common failures and battle-tested fixes |
+| `SYSTEM-PROMPT.md` | **Paste as Claude Project instructions** — complete prompt architecture + rules |
+| `01-PHOTOREALISM-GUIDE.md` | iPhone specs, 15 AI skin tells, ethnicity/age guides, eye/hair/clothing/posture details |
+| `02-ARCHETYPES.md` | 6 archetypes with **complete copy-paste Nano Banana Pro prompts** |
+| `03-LIGHTING-LIBRARY.md` | 8 pre-built lighting scenarios as JSON blocks |
+| `04-NEGATIVE-PROMPTS.md` | Semantic exclusion negatives that actually work (not keyword salads) |
+| `05-BATCH-WORKFLOW.md` | Creating consistent avatar sets for brands |
+| `06-TROUBLESHOOTING.md` | Every failure mode with exact fixes |
 
 ## Quick Start
 
 1. Create a new Claude Project
-2. Paste `SYSTEM-PROMPT.md` as the project instructions
-3. Upload all other `.md` files as project knowledge
-4. Ask for avatars — describe who you need and the product context
+2. Connect this GitHub repo
+3. Paste `SYSTEM-PROMPT.md` as project instructions
+4. Say: "Create an avatar for [brand] — [product type] — [target buyer description]"
+5. Copy the output prompt → paste into Nano Banana Pro → done
 
-## Philosophy
+## Key Innovations
 
-**Real > Unique.** No signature detail systems. No multi-stage pipelines. No JSON templates. Just clean prompts that produce people who look photographed, not generated.
-
-## Key Principles
-
-- **Midshot framing** — head, shoulders, upper chest (selfie at arm's length)
-- **iPhone front camera** — deep DOF, no blur, no portrait mode
-- **Natural light only** — window, ambient, outdoor. Never studio
-- **30% expression intensity** — subtle and genuine, never theatrical
-- **Gaze 2-3° off-center** — looking at the screen, not the lens
-- **Real skin** — pores, texture, imperfections, uneven tone
-- **Worn-in clothes** — wrinkles, fading, real fabric behavior
+- **`<thought_process>` blocks** — force the model to calculate optical physics before rendering
+- **23mm barrel distortion** — replicate real iPhone front camera perspective (nose enlarged, ears hidden)
+- **FACS expression system** — precise muscle-level control at ≤30% intensity
+- **Clinical skin terminology** — bypass Google's beauty filters while achieving realism
+- **Selfie arm biomechanics** — shoulder elevation, torso twist, neck tendon tension
+- **Semantic negatives** — conceptual exclusion that actually works in Nano Banana Pro
+- **8 lighting scenarios** — pre-built JSON blocks matched to product categories

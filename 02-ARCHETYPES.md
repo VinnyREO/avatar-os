@@ -1,25 +1,29 @@
-# 02 — Avatar Archetypes
+# 02 — Avatar Archetypes (Nano Banana Pro)
 
 ## Philosophy: ICP Mirrors
 
-The person in the ad represents the **BUYER**, not the brand. Viewers convert when they think "that's literally me." Every avatar mirrors the target customer's age, style, environment, and life stage.
-
-For each brand: pick 3-5 archetypes that match their actual customer segments. Rotate to avoid "spokesperson fatigue."
+The person in the ad represents the **BUYER**, not the brand. Viewers convert when they think "that's literally me." Every avatar mirrors the target customer.
 
 ---
 
 ## 🧬 The Optimizer
 **Best for:** Performance supplements, protein, nootropics, pre-workout
 **Demographics:** Late 20s-early 30s, male-skewing, lean athletic build
-**Environment:** Modern apartment, home gym, standing desk setup
-**Clothing:** Fitted performance tee, joggers, clean sneakers visible on shelf
-**Hair:** Short, clean, slightly product-styled but not perfect
-**Expression:** Focused, calm confidence — "someone who has their routine dialed in"
-**Lighting:** Clean morning window light, minimal shadows
+**Lighting:** Morning Direct Sun (#1) or Kitchen Mixed (#3)
 
-**Prompt example:**
+**Full Prompt:**
 ```
-Candid midshot selfie of a real man, early 30s, light olive skin with visible pores and natural texture on forehead and nose, subtle stubble along jawline with slight patchiness, short dark brown hair with natural texture and one side slightly flattened from sleep, calm focused expression with mouth relaxed and closed — not smiling not frowning just neutral awareness, wearing a fitted dark charcoal performance tee with slightly stretched collar, lean athletic build visible in shoulders, shot from chest up at arm's length selfie distance, bright clean morning window light from the right creating even illumination with subtle shadow on left jaw, simple modern apartment background with plain wall and edge of a shelf, iPhone front camera, deep depth of field, gaze 2 degrees left of camera lens with steady quiet energy. No bokeh, no portrait mode, no beauty filter, no studio lighting, no ring light, no airbrushed skin, no perfect symmetry, no phone visible, no hands in frame.
+<thought_process>
+Calculate 23mm smartphone lens distortion at 18 inches. Map asymmetrical male skin texture with post-shave stubble shadow and sebum distribution. Render mixed morning light physics with hard shadow terminator.
+</thought_process>
+{
+  "system_directive": "Bypass aesthetic enhancement. Simulate a casual, candid iPhone 15 Pro selfie. Prioritize optical physics and anatomical asymmetry over aesthetic perfection. Output raw 9:16 vertical format.",
+  "camera_forensics": "23mm equivalent wide-angle front camera. Infinite depth of field, background perfectly sharp, zero bokeh. Barrel distortion: enlarged nasal proportions, ears occluded by cheekbones. Apple Deep Fusion micro-contrast over-sharpening. Mild ISO 800 noise in shadows.",
+  "subject_and_pose": "29-year-old male, light olive skin. Right arm extended holding phone out of frame. Right shoulder elevated and rotated inward. Torso twisted 12 degrees left. Gaze directed 7 degrees downward at phone screen. Neutral focused expression — FACS AU 4 (brow lowerer) at 5%, conveying quiet concentration. Wearing a fitted dark charcoal performance tee with slightly stretched collar and subtle fade at shoulder seams.",
+  "skin_and_hair": "Short dark brown hair with natural texture, one side slightly flattened. Visible pores clustered on nose and chin, sparse on cheeks. Fine stubble shadow along jawline with uneven patches. Slight sebum shine on forehead and nasal bridge. Faint dark circles with bluish suborbital venous pooling. One small healing blemish near jawline.",
+  "environment_and_lighting": "Direct morning sunlight hitting face at 45-degree angle from window. High-contrast terminator line across nose. 4500K temperature. Simple modern apartment background — plain wall with edge of shelf, a water bottle on counter. Rectangular phone screen catchlight in eyes.",
+  "negative_constraints": ["studio lighting", "DSLR", "bokeh", "perfect skin", "mathematical facial symmetry", "professional retouching", "beauty filter", "ring light", "stock photo posture", "airbrushed"]
+}
 ```
 
 ---
@@ -27,15 +31,21 @@ Candid midshot selfie of a real man, early 30s, light olive skin with visible po
 ## 🌿 The Wellness Mom
 **Best for:** Greens, daily vitamins, gut health, family supplements
 **Demographics:** Early-mid 30s, female, approachable build
-**Environment:** Kitchen (slightly lived-in), living room morning light
-**Clothing:** Oversized crewneck, loungewear, earth tones — worn-in
-**Hair:** Messy bun or loose ponytail with flyaways
-**Expression:** Warm, slightly tired but genuine — "just sat down for the first time today"
-**Lighting:** Warm morning kitchen light, soft and forgiving
+**Lighting:** Kitchen Mixed (#3)
 
-**Prompt example:**
+**Full Prompt:**
 ```
-Candid midshot selfie of a real woman, early 30s, warm medium skin with visible pores and slight under-eye warmth showing natural fatigue, small barely-visible blemish near jawline, dark wavy hair pulled into a loose messy bun with flyaways at temples and forehead, gentle tired half-smile with lips barely curved upward — warmth mostly in the eyes, wearing an oversized oatmeal-colored crewneck sweatshirt with slight pilling at cuffs and a small coffee stain near the hem, relaxed rounded shoulders with one slightly higher, shot from chest up at arm's length selfie distance, soft warm morning light from a kitchen window on the left casting gentle diffused shadow on right cheek, simple kitchen background with open wooden shelving slightly visible, iPhone front camera, deep depth of field, everything in focus, gaze looking 3 degrees right of camera with soft unfocused warmth. No bokeh, no portrait mode, no beauty filter, no studio lighting, no ring light, no airbrushed skin, no symmetrical face, no phone visible, no hands in frame.
+<thought_process>
+Calculate 23mm barrel distortion on female facial structure at arm's length. Map heterogeneous skin imperfections including periorbital fatigue markers and hormonal pigmentation. Render mixed kitchen lighting with dual color temperature shadows.
+</thought_process>
+{
+  "system_directive": "Bypass aesthetic enhancement. Simulate a casual, candid iPhone 15 Pro selfie. Prioritize optical physics and anatomical asymmetry over aesthetic perfection. Output raw 9:16 vertical format.",
+  "camera_forensics": "23mm equivalent wide-angle front camera. Infinite depth of field, background perfectly sharp. Barrel distortion at 18-inch distance. Apple Smart HDR 5 tone mapping lifting shadow detail. Deep Fusion over-sharpening on skin micro-contrast.",
+  "subject_and_pose": "33-year-old woman, warm medium skin. Right arm extended holding phone out of frame. Right shoulder distinctly elevated, torso twisted 15 degrees left. Cervical spine tilts to compensate, sternocleidomastoid tendon visible. Gaze 7 degrees downward at phone screen. Subtle tired warmth — FACS AU 12 at 8% (minimal zygomatic smile), AU 6 at 5% (slight orbicularis oculi engagement). Wearing an oversized oatmeal crewneck sweatshirt with pilling at cuffs, slight coffee stain near hem, diagonal tension folds pulling toward elevated shoulder.",
+  "skin_and_hair": "Dark wavy hair pulled into a loose messy bun with flyaways at temples and forehead, flattened oily roots showing day-two texture. Heterogeneous pore distribution: visible sebaceous pores on nose, smoother cheeks. Fine vellus hair catching light on jawline. Slight periorbital hollowing with translucent bluish venous pooling under eyes. Natural malar flush. T-zone sebum shine.",
+  "environment_and_lighting": "Mixed kitchen lighting: warm tungsten overhead recessed LEDs (3000K) casting downward shadows under brow, cool daylight (5500K) spilling from side window. Dual color temperature visible on skin. Background: cluttered kitchen counter with open wooden shelving, half-empty water glass, crumpled paper towel. Everything in sharp focus. Rectangular phone screen catchlight in eyes.",
+  "negative_constraints": ["studio lighting", "three-point lighting", "DSLR", "bokeh", "perfect skin", "symmetrical face", "professional color grading", "beauty filter", "ring light", "airbrushed retouching", "stock photo"]
+}
 ```
 
 ---
@@ -43,86 +53,108 @@ Candid midshot selfie of a real woman, early 30s, warm medium skin with visible 
 ## ✨ The Glow-Up Girl
 **Best for:** Collagen, beauty supplements, skin health, gummies
 **Demographics:** Mid-20s, female, naturally pretty (not model-perfect)
-**Environment:** Bathroom, bedroom, bright natural-light spaces
-**Clothing:** Ribbed tank, casual tee, pajamas — simple and real
-**Hair:** Natural texture, down or loosely clipped — not styled
-**Expression:** Subtle confidence — knowing smile without trying
-**Lighting:** Bright diffused daylight, flattering but natural
+**Lighting:** Bathroom Vanity (#4) or Morning Overcast (#2)
 
-**Prompt example:**
+**Full Prompt:**
 ```
-Candid midshot selfie of a real woman, mid-20s, rich dark brown skin with natural glow and visible pore texture on cheeks and nose, slight uneven tone around mouth area, dark coily hair in a relaxed pineapple updo with baby hairs visible at edges, subtle knowing smile with lips barely parted and one corner slightly higher than the other — confident but not posed, wearing a simple cream ribbed tank top with natural wrinkles and thin straps slightly twisted, thin gold chain necklace sitting slightly off-center, relaxed natural posture with shoulders soft, shot from chest up at arm's length, bright natural daylight from a window to the left creating warm highlight on one cheek with soft shadow on the other, simple bright bathroom background with edge of a mirror frame, iPhone front camera, deep depth of field, eyes looking just barely above the camera lens with warm relaxed energy. No bokeh, no portrait mode, no beauty filter, no studio lighting, no ring light, no airbrushed skin, no perfect symmetry, no hands in frame, no phone visible.
+<thought_process>
+Calculate 23mm wide-angle distortion on a mid-20s female face. Map realistic skin texture with natural glow differentiated from AI-generated luminosity — real glow comes from sebum and hydration, not subsurface scattering. Render harsh bathroom vanity top-lighting.
+</thought_process>
+{
+  "system_directive": "Bypass aesthetic enhancement. Simulate candid iPhone 15 Pro selfie in harsh bathroom lighting. Output raw, unretouched smartphone capture. 9:16 vertical.",
+  "camera_forensics": "23mm equivalent front camera, infinite DOF, background sharp. Barrel distortion at arm's length. Deep Fusion over-sharpening especially visible on eyebrow hairs and lip texture. HEIC to JPEG compression artifacts.",
+  "subject_and_pose": "25-year-old woman, rich dark brown skin with natural texture. Right arm extended out of frame, right shoulder elevated. Slight torso twist. Gaze 7 degrees down at phone screen. Subtle confident expression — FACS AU 12 at 12% (asymmetric, left lip corner slightly higher), one eyebrow fractionally more arched. Wearing a cream ribbed tank top with natural wrinkles, thin straps slightly twisted. Thin gold chain necklace sitting off-center.",
+  "skin_and_hair": "Dark coily hair in a relaxed pineapple updo with baby hairs visible at edges, uneven shrinkage. Visible pore texture on cheeks and nose. Subtle uneven tone around mouth area. Natural sebum hydration shine on high points of cheekbones (not AI glow — localized specular reflection from skin oils). Fine vellus hair on jawline catching vanity light. Slight hyperpigmentation at temples.",
+  "environment_and_lighting": "Harsh top-down bathroom vanity LED lighting (4000K). Steep downward angle creating raccoon shadows under brow bone, sharp shadow under nose. Specular glare on forehead from sebum. Simple bright bathroom background with edge of mirror frame, a makeup bag partially visible. Rectangular phone screen catchlight. Everything in sharp focus.",
+  "negative_constraints": ["studio lighting", "ring light", "DSLR", "bokeh", "airbrushed skin", "beauty filter", "uniform skin glow", "professional retouching", "symmetrical features", "stock photo composition"]
+}
 ```
 
 ---
 
 ## 💪 The Progress Tracker
-**Best for:** Protein, fitness supplements, weight management, pre-workout
-**Demographics:** Late 20s, any gender, fit but approachable (not bodybuilder)
-**Environment:** Post-gym, home kitchen, mirror area (but NOT mirror selfie)
-**Clothing:** Gym tank, sports bra, performance wear — sweaty and real
-**Hair:** Post-workout — slightly damp, pulled back, messy
-**Expression:** Post-workout calm — accomplished, slightly flushed
-**Lighting:** Mixed gym/home lighting, slightly harsh but real
+**Best for:** Protein, fitness supplements, weight management
+**Demographics:** Late 20s, any gender, fit but approachable
+**Lighting:** Morning Direct Sun (#1) or mixed gym
 
-**Prompt example:**
+**Full Prompt:**
 ```
-Candid midshot selfie of a real woman, late 20s, fair skin with visible flush on cheeks and chest from exercise, light sheen of sweat on forehead, a few freckles across the bridge of nose, light brown hair pulled back in a low ponytail with sweaty wisps stuck to temples and neck, relaxed satisfied expression — not smiling but face is soft and open like she just finished something hard, wearing a dusty rose sports tank with darker sweat marks at the collar and slight wear on the shoulder seams, toned but natural athletic build visible in shoulders and collarbones, shot from chest up at arm's length selfie distance, bright overhead fluorescent mixed with window light creating slightly unflattering but real illumination, simple gym or apartment background with plain wall, iPhone front camera, deep depth of field, gaze 2 degrees right of camera with calm post-effort energy. No bokeh, no blur, no beauty filter, no studio lighting, no ring light, no airbrushed skin, no model pose, no hands visible, no phone in frame.
+<thought_process>
+Calculate post-exercise skin presentation: vasodilation causing facial flush, perspiration affecting skin reflectance, dampened hair texture. Map 23mm distortion on athletic female frame with elevated selfie arm biomechanics.
+</thought_process>
+{
+  "system_directive": "Bypass aesthetic enhancement. Simulate post-workout iPhone selfie. Raw smartphone capture quality. 9:16 vertical.",
+  "camera_forensics": "23mm front camera, infinite DOF, barrel distortion at 18 inches. Smart HDR 5 lifting shadow detail in gym environment. ISO 1000 noise from mixed indoor lighting. Deep Fusion over-sharpening on sweat droplets and fabric texture.",
+  "subject_and_pose": "28-year-old woman, fair skin with exercise-induced vasodilation flush on cheeks and upper chest. Right arm extended out of frame, right shoulder elevated. Athletic but natural build visible in shoulders and collarbones. Relaxed post-effort expression — not smiling, face soft and open. FACS AU 25 at 5% (lips barely parted, breathing). Wearing a dusty rose sports tank with darker sweat marks at collar, visible wear on shoulder seams.",
+  "skin_and_hair": "Light sheen of perspiration on forehead, upper lip, and clavicle area. Flushed erythema on cheeks and neck. Visible pores enlarged from heat. Light brown hair pulled back in low ponytail with sweaty wisps stuck to temples and back of neck. Freckles across nose bridge. Slight exercise-induced under-eye puffiness.",
+  "environment_and_lighting": "Bright overhead fluorescent mixed with window light — slightly unflattering but real. Color temperature mismatch: cool 5500K fluorescent from above, warm 4000K daylight from side window. Gym or apartment background with plain wall. Rectangular phone screen catchlight. Everything sharp.",
+  "negative_constraints": ["studio lighting", "professional sports photography", "DSLR", "bokeh", "perfect skin", "beauty filter", "fitness magazine pose", "airbrushed", "ring light", "dramatic lighting"]
+}
 ```
 
 ---
 
 ## 😤 The Skeptic-Turned-Believer
-**Best for:** Any product — testimonial angle, "I didn't think it would work" narrative
-**Demographics:** 35-45, any gender, relatable "regular person" look
-**Environment:** Home office, kitchen, living room — everyday settings
-**Clothing:** Casual everyday — henley, button-up, basic tee — lived-in
-**Hair:** Low-maintenance, natural grey if age-appropriate
-**Expression:** Genuine pleasant surprise — "honestly didn't expect this to work"
-**Lighting:** Indoor ambient, slightly warm, mixed sources
+**Best for:** Any product — testimonial angle
+**Demographics:** 35-45, any gender, relatable everyday look
+**Lighting:** Kitchen Mixed (#3) or Indoor Evening (#7)
 
-**Prompt example:**
+**Full Prompt:**
 ```
-Candid midshot selfie of a real man, early 40s, medium brown skin with natural texture and visible laugh lines around eyes and mouth, slight grey coming in at temples in short cropped hair, two-day stubble with some grey mixed in, expression of genuine pleasant surprise — one eyebrow slightly raised and corners of mouth turned up just barely like he's about to say something positive, wearing a lived-in charcoal henley with slightly stretched collar and one button undone, natural build with relaxed shoulders one slightly forward, shot from chest up at arm's length selfie distance, warm indoor ambient lighting mixed with window light creating natural shadows under cheekbones, kitchen or living room background with everyday objects slightly visible, iPhone front camera, deep depth of field, gaze 2 degrees off-center to the left with surprised warmth. No bokeh, no blur, no airbrushed skin, no studio lighting, no ring light, no beauty mode, no hands in frame, no phone visible.
+<thought_process>
+Calculate 23mm distortion on a 40+ male face with age-appropriate skin changes. Map established expression lines, volume loss, and mixed indoor lighting with warm-cool temperature interplay. Render skeptical-to-surprised micro-expression using FACS units.
+</thought_process>
+{
+  "system_directive": "Bypass aesthetic enhancement. Simulate casual candid iPhone selfie of a middle-aged man. Raw smartphone capture. 9:16 vertical.",
+  "camera_forensics": "23mm equivalent front camera, infinite DOF, barrel distortion. Smart HDR 5 tone mapping. Deep Fusion over-sharpening on facial hair and fabric texture. ISO 800 noise in shadow areas.",
+  "subject_and_pose": "42-year-old man, medium brown skin with natural texture. Right arm extended, right shoulder elevated, torso twisted. Gaze 7 degrees down at phone. Expression of genuine pleasant surprise — FACS AU 1+2 at 15% (subtle inner brow raise), AU 12 at 10% (slight lip corner pull), asymmetric — one side of mouth slightly higher. Wearing a lived-in charcoal henley with stretched collar, one button undone. Natural build, relaxed shoulders with one slightly forward.",
+  "skin_and_hair": "Established crow's feet at rest, visible nasolabial folds, forehead furrows. Short cropped hair with grey at temples, two-day stubble with grey mixed in. Heterogeneous pore distribution — enlarged on nose, visible follicular openings on cheeks. Fine vellus hair on earlobes. Visible laugh lines. Slight sebum in T-zone. Asymmetric eyebrows — one slightly more arched.",
+  "environment_and_lighting": "Warm indoor ambient lighting mixed with window light. 3000K lamp warmth with 5500K daylight creating dual-temperature shadows. Kitchen or living room with everyday clutter slightly visible — mail on counter, coffee mug. Rectangular phone screen catchlight. Everything in focus.",
+  "negative_constraints": ["studio lighting", "DSLR", "bokeh", "airbrushed skin", "beauty filter", "anti-aging retouching", "professional color grading", "symmetrical face", "stock photo", "ring light"]
+}
 ```
 
 ---
 
-## 👨‍💼 The Weekend Warrior
-**Best for:** Energy, recovery, joint health, multivitamins for active adults
-**Demographics:** Late 30s-40s, any gender, active but not "gym bro"
-**Environment:** Outdoors, garage, backyard, casual active settings
-**Clothing:** Casual outdoor — flannel, baseball cap, hiking gear
-**Hair:** Slightly windblown or hat-flattened
-**Expression:** Easy-going, approachable — weekend energy
-**Lighting:** Outdoor natural light, sun or overcast
+## 🏃 The Weekend Warrior
+**Best for:** Energy, recovery, joint health, multivitamins
+**Demographics:** Late 30s-40s, any gender, active but not gym-bro
+**Lighting:** Outdoor Shade (#5) or Overcast (#6)
 
-**Prompt example:**
+**Full Prompt:**
 ```
-Candid midshot selfie of a real woman, late 30s, tan skin with visible sun freckles on cheeks and nose, fine lines at corners of eyes from squinting, natural sun-lightened brown hair falling loose past shoulders with windblown texture and some frizz at the crown, easy relaxed smile at about 20% — more in the eyes than the mouth, wearing a faded sage green quarter-zip pullover with a small snag near the zipper and sleeves pushed up slightly showing tanned forearms at the bottom of frame, naturally strong build in shoulders, shot from chest up at arm's length selfie distance, bright overcast outdoor daylight creating even illumination with no harsh shadows, blurred trees and sky in background, iPhone front camera, deep depth of field, gaze looking just slightly past camera to the left with relaxed weekend energy. No bokeh, no portrait mode, no beauty filter, no studio lighting, no ring light, no airbrushed skin, no perfect pose, no hands in frame, no phone visible.
+<thought_process>
+Calculate 23mm distortion on outdoor selfie. Map sun-exposed skin presentation: UV damage, tan lines, environmental weathering. Render open shade lighting with blue sky ambient and green foliage color cast.
+</thought_process>
+{
+  "system_directive": "Bypass aesthetic enhancement. Simulate outdoor iPhone selfie. Raw smartphone capture with computational photography artifacts. 9:16 vertical.",
+  "camera_forensics": "23mm front camera, infinite DOF, barrel distortion. Smart HDR 5 aggressively lifting shadows against bright sky. Deep Fusion sharpening on fabric texture and individual hair strands. Slight chromatic aberration at frame edges.",
+  "subject_and_pose": "38-year-old woman, tan skin with visible sun freckles on cheeks and nose. Right arm extended, right shoulder elevated. Easy relaxed expression — FACS AU 12 at 8% (subtle smile, more in the eyes). Squint lines from outdoor light — AU 7 at 10% (lid tightener). Wearing a faded sage green quarter-zip pullover with small snag near zipper, sleeves pushed up. Naturally strong build visible in shoulders.",
+  "skin_and_hair": "Sun-exposed skin texture: freckles, fine lines at eye corners from squinting, slight uneven tan. Natural sun-lightened brown hair falling loose with windblown texture, frizz at crown, natural part slightly greasy from activity. Visible pores on nose, slight peeling on nose bridge from recent sun exposure.",
+  "environment_and_lighting": "Open shade with cool ambient blue sky illumination. Multi-directional bounce light, minimal directional shadows. Slight green color cast from overhead foliage. Background: blurred trail or park setting in sharp focus. Rectangular phone screen catchlight reflecting blue sky.",
+  "negative_constraints": ["studio lighting", "golden hour glow filter", "DSLR", "bokeh", "lens flare", "HDR effect", "saturated colors", "professional composition", "beauty filter", "ring light"]
+}
 ```
 
 ---
 
 ## Matching Archetypes to Products
 
-| Product Category | Primary Archetype | Secondary | Why |
+| Product Category | Primary Archetype | Secondary | Best Lighting |
 |---|---|---|---|
-| Greens / Daily Vitamins | Wellness Mom | Optimizer | Trust + routine |
-| Protein / Pre-Workout | Progress Tracker | Optimizer | Results + discipline |
-| Collagen / Beauty | Glow-Up Girl | Wellness Mom | Aesthetic + natural |
-| Sleep / Stress | Wellness Mom | Skeptic | Relatable + testimonial |
-| Energy / Recovery | Weekend Warrior | Progress Tracker | Active + results |
-| Gut Health | Wellness Mom | Skeptic | Trust + "it actually works" |
-| Nootropics | Optimizer | Skeptic | Performance + proof |
-| Joint / Longevity | Weekend Warrior | Skeptic | Active aging + believability |
+| Greens / Daily Vitamins | Wellness Mom | Optimizer | Kitchen Mixed |
+| Protein / Pre-Workout | Progress Tracker | Optimizer | Morning Sun |
+| Collagen / Beauty | Glow-Up Girl | Wellness Mom | Bathroom or Overcast |
+| Sleep / Stress | Wellness Mom | Skeptic | Evening Lamps |
+| Energy / Recovery | Weekend Warrior | Progress Tracker | Outdoor Shade |
+| Gut Health | Wellness Mom | Skeptic | Kitchen Mixed |
+| Nootropics | Optimizer | Skeptic | Morning Overcast |
+| Joint / Longevity | Weekend Warrior | Skeptic | Outdoor |
 
 ## Creating Custom Archetypes
 
-When a brand's audience doesn't fit these templates:
-
-1. **Start with the buyer.** Who is actually purchasing this? Age, gender, lifestyle, income bracket, daily routine
-2. **Find the moment.** When would this person take a selfie? That's your setting and lighting
-3. **Dress them from their closet.** What do they actually wear at home? Not aspirational — real
-4. **Give them a Tuesday face.** Not their best day, not their worst. Just a regular moment
-5. **Write the prompt** following the structure in the SYSTEM-PROMPT — person, skin, hair, expression, clothing, framing, lighting, environment, camera, negative
+1. **Start with the buyer.** Who actually purchases? Age, gender, lifestyle, daily routine
+2. **Find the selfie moment.** When would they take a photo? That's your setting and lighting
+3. **Dress them from their closet.** Real clothes with real wear. Not aspirational
+4. **Give them a Tuesday face.** Regular moment, regular expression. FACS units at ≤30%
+5. **Apply the template.** Copy any archetype above and swap the specifics

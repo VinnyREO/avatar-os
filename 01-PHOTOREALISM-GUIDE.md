@@ -1,138 +1,134 @@
-# 01 — Photorealism Guide
+# 01 — Photorealism Guide (Nano Banana Pro)
 
 ## The iPhone Selfie Standard
 
-Every avatar should look like it was taken on an iPhone front camera by a real person. Not a photographer. Not a studio. Not a DSLR. A regular person holding their phone at arm's length.
+Every avatar must look like an iPhone 15 Pro front camera selfie taken by a real person at arm's length. Not a DSLR. Not a studio. Not portrait mode. A raw, computational-photography-processed smartphone capture.
 
-This guide breaks down what makes a photo look real vs AI, based on battle-tested generation failures.
+## iPhone 15 Pro Front Camera — Exact Specs
 
-## Skin
+These specs define every prompt you write:
 
-Skin is the #1 AI tell. Get this wrong and nothing else matters.
+| Spec | Value | Visual Impact |
+|---|---|---|
+| Sensor | 12MP, 1/3.6" | Tiny sensor = deep DOF, visible noise in shadows |
+| Focal Length | 23mm equivalent | Wide-angle barrel distortion on faces |
+| Aperture | f/1.9 | Combined with tiny sensor = near-infinite DOF |
+| Processing | Smart HDR 5 + Deep Fusion | Lifted shadows, over-sharpened micro-contrast |
+| Format | HEIC → JPEG | Compression artifacts visible on close inspection |
+| Distance | 16-20 inches (arm's length) | Nose enlarged 10-15%, ears hidden behind cheekbones |
 
-### What Real Skin Looks Like
-- **Pores** visible on nose, cheeks, forehead — especially in natural light
-- **Uneven tone** — slight redness on cheeks, different color around eyes, sun damage patches
-- **Under-eye area** — not dark circles, but natural warmth/color difference. Purple-blue for fair skin, brown for darker skin
-- **Texture variation** — smoother on forehead, more textured on cheeks, slightly oily in T-zone
-- **Minor imperfections** — a blemish, dry patch, slight redness, visible capillaries
-- **Facial hair shadow** — on men, even freshly shaved skin has a slight shadow. On women, fine peach fuzz catches light
+### Perspective Distortion at 23mm
 
-### What AI Skin Looks Like (Avoid)
-- Uniform color across entire face
-- No visible pores
-- "Glowing" or "luminous" without a light source
-- Perfectly even texture
-- No under-eye color variation
-- Plastic/waxy appearance
+This is the #1 thing AI gets wrong. A 23mm lens at arm's length creates **center-bulge barrel distortion**:
+- Nose enlarges by 10-15%
+- Forehead appears to slope backward
+- Ears recede behind cheekbones (often invisible)
+- Chin can appear slightly wider
+- The eye closest to camera appears marginally larger
 
-### Prompt Language for Real Skin
-✅ "visible pores and natural skin texture, slight unevenness in skin tone, natural under-eye warmth"
-❌ "beautiful skin" / "clear complexion" / "radiant glow" / "flawless"
+**Prompt language:** "23mm wide-angle front camera barrel distortion at 18-inch distance: enlarged nasal proportions, receding lateral jawline, ears entirely occluded by cheekbones, infinite depth of field."
 
-## Lighting
+### Apple's Computational Pipeline
 
-### Real iPhone Selfie Lighting
-- **Window light** — soft, directional, creates natural shadow on one side of face
-- **Overcast outdoor** — flat, even, no harsh shadows. Most forgiving
-- **Indoor ambient** — warm, mixed sources (overhead + window), slightly less flattering
-- **Evening golden hour** — warm, directional, long shadows
+Real iPhone photos have distinctive processing artifacts that AI never adds:
+- **Smart HDR 5**: Flattens dynamic range, lifts shadows revealing chroma noise
+- **Deep Fusion**: Aggressively over-sharpens micro-contrast (pores, eyelashes) while watercoloring low-light textures
+- **Noise**: ISO 800+ luminance and chroma noise in shadow gradients
+- **Compression**: HEIC to JPEG artifacts
 
-### AI Lighting Tells (Avoid)
-- **Ring light** — circular catchlights in eyes. Instant AI tell
-- **Studio three-point** — too perfectly balanced. No one has this at home
-- **Beauty dish** — soft but too perfect falloff
-- **Even front lighting** — no shadows = not real
-- **Catch lights** — should be irregular window shapes, not circles or squares
+**Prompt language:** "Apple Deep Fusion micro-contrast over-sharpening on skin textures. Smart HDR flattened highlights. HEIC to JPEG compression artifacts. Mild ISO 800 luminance and chroma noise in shadow gradients."
 
-### Prompt Language for Real Lighting
-✅ "soft natural window light from the left, gentle shadow on right side of face"
-✅ "warm indoor ambient lighting with mixed sources"
-❌ "perfectly lit" / "studio quality" / "beautifully illuminated"
+## Skin — The #1 AI Detector
+
+Humans detect fake skin in under 0.5 seconds. Nano Banana Pro defaults to uniform "subsurface scattering" that looks like silicone.
+
+### The 15 AI Skin Tells
+
+| # | AI Default | Reality | Nano Banana Pro Fix |
+|---|---|---|---|
+| 1 | Uniform pore spacing | Real pores cluster irregularly | "Heterogeneous pore distribution: stretched sebaceous pores on nasal ala, transitioning to smooth lateral cheeks" |
+| 2 | No peach fuzz | Everyone has vellus hair | "Fine vellus hair catching backlight on jawline, upper lip, and sideburn area" |
+| 3 | Uniform skin color | Real skin has zones | "Distinct dermal color zones: periorbital darkness, perioral redness, T-zone sebum shine, malar flush" |
+| 4 | Perfect under-eyes | Real under-eyes show veins | "Suborbital volumetric hollowing with translucent bluish venous pooling" |
+| 5 | Smooth forehead | Real foreheads have texture | "Visible frontalis muscle texture, fine horizontal lines even at rest" |
+| 6 | Even skin thickness | Varies across face | "Translucent thin skin at temples showing temporal veins, thicker sebaceous skin on nose" |
+| 7 | No sebum | Real skin has oil | "Natural sebum shine concentrated on T-zone: forehead, nasal bridge, chin" |
+| 8 | Perfect lip texture | Real lips have micro-texture | "Lip vermilion with vertical labial furrows, slight dryness at corners, uneven color saturation" |
+| 9 | Uniform subsurface | Real SSS varies | "Variable subsurface scattering: translucent ear tips, opaque forehead, semi-translucent nasal ala" |
+| 10 | No capillaries | Visible on thin skin | "Visible capillary network at nasal ala, inner cheeks, and temple area" |
+| 11 | Symmetrical features | Real faces aren't | "Anatomical facial asymmetry: left eye 2mm lower, nasal septum deviated 3°, uneven lip line" |
+| 12 | Porcelain neck | Necks have texture | "Platysmal bands visible on neck, horizontal necklace lines, texture change at jawline" |
+| 13 | Perfect eyebrows | Real brows are uneven | "Asymmetric eyebrow arch, sparse areas at tail, individual hair direction variation" |
+| 14 | Uniform cheek surface | Real cheeks vary | "Subtle acne scarring or texture variation on lateral cheeks, visible follicular openings" |
+| 15 | Glowing skin | Real skin absorbs light | "Matte skin absorption with localized specular highlights only on sebaceous areas" |
+
+### Skin by Ethnicity — Specific Adjustments
+
+**Fair/Northern European:** "Translucent fair skin revealing subcutaneous vasculature, pink undertones in malar area, visible blue-green veins at temples, tendency toward erythema (redness) on cheeks and nose, sparse barely-visible blonde vellus hair."
+
+**Mediterranean/Olive:** "Warm olive undertones with golden-yellow base pigmentation, slight hyperpigmentation around eyes, thicker dermal density with smaller pore visibility, natural protective melanin distribution."
+
+**East Asian:** "Smooth dermal texture with smaller pore openings, warm yellow-beige undertones, minimal visible vasculature, characteristic flatter midface light distribution. Monolids or distinct epicanthic folds without exaggerated lifting, lower nasal bridge, wider bi-zygomatic width."
+
+**South Asian/Brown:** "Rich warm brown undertones with significant melanin variation across face, periorbital hyperpigmentation, visible texture contrast between oily T-zone and matte cheeks, fuller lip pigmentation gradient."
+
+**Black/African:** "Deep melanin with complex undertones (may be warm reddish, cool blue-black, or neutral). Authentic morphological features: broader alar base, full mucosal lips without artificial gloss, tight 4C coily hair with uneven shrinkage. Avoid Eurocentric skeletal defaults."
+
+**Mixed-Race:** "Complex melanin distribution with visible heritage blending — specify the actual combination rather than defaulting to light brown homogeneity. Include feature variation that reflects real genetic mixing."
+
+### Skin by Age
+
+| Age | Key Markers |
+|---|---|
+| 25 | Smooth with minor textural variation, possible hormonal acne scarring, no expression lines at rest, full subcutaneous fat, even elasticity |
+| 30 | First fine lines appear at lateral eye corners when smiling, early nasolabial fold, slight under-eye hollowing begins, pore size increasing on nose |
+| 35 | Expression lines visible at rest around eyes, early forehead lines, periorbital volume loss, first grey hairs possible, skin texture becoming more heterogeneous |
+| 40 | Established nasolabial folds, crow's feet at rest, forehead furrows, early jowling, neck texture changes, noticeable pore enlargement, uneven pigmentation |
+| 45 | Deep expression lines, jawline softening, upper eyelid laxity, more pronounced pigmentation irregularity, lip volume decreasing, visible platysmal bands |
+| 50 | Advanced volume loss in midface, deep marionette lines, textural roughening, significant sun damage visible, prominent neck lines, thinning eyebrows |
+| 55 | Significant gravitational changes, heavy lid, deep furrows, mottled pigmentation, thin papery texture in areas, visible bone structure through volume loss |
 
 ## Eyes & Gaze
 
-### Real Selfie Gaze
-- **2-3 degrees off-center.** People look at their screen, not the lens. The lens is above where they're looking
-- **Slightly unfocused.** Not intense, not piercing. Natural "looking at phone" softness
-- **Asymmetric.** One eye slightly more open, or one pupil fractionally higher
-- **Catchlights.** Should match the lighting source — irregular window shape, not perfect circles
+### Real vs AI Eyes
 
-### AI Gaze Tells
-- Dead-center eye contact (looking straight through the camera)
-- Both eyes perfectly symmetrical
-- "Piercing" or "intense" eye contact
-- Ring light circles in both eyes
-- Unnatural eye color saturation
+| Feature | AI Default | Reality |
+|---|---|---|
+| Catchlights | Circular (ring light) | Rectangular (phone screen) |
+| Gaze | Dead-center at lens | 7° downward at phone screen |
+| Iris | Perfectly round, vivid color | Irregular pupil border, muted natural color |
+| Sclera | Pure white | Slight yellow/blue tint, visible blood vessels |
+| Moisture | Uniform shine | Tear film meniscus at lower lid margin |
+| Symmetry | Both eyes identical | One eye slightly more open, different angle |
 
-## Hair
+**Prompt language:** "Rectangular smartphone screen catchlight in both eyes. Gaze directed 7 degrees downward at phone screen, not at camera lens. Natural iris with irregular pupil border. Sclera with faint blood vessels. Slight tear film meniscus at lower lid."
 
-### Real Hair
-- **Day-two texture** — not freshly styled, slightly flattened or frizzy
-- **Flyaways** — stray hairs around the face, especially at temples and crown
-- **Roots showing** — if colored, natural roots visible
-- **Imperfect part** — slightly off-center, not ruler-straight
-- **Light interaction** — individual strands catch light differently
+## Hair — Day State Matters
 
-### AI Hair
-- Every strand perfectly placed
-- Salon-fresh at all times
-- Impossibly thick and voluminous
-- No flyaways or frizz
-- Uniform color from root to tip
+Always specify the hair's current state, not its ideal form:
 
-## Clothing
+| State | Visual Characteristics |
+|---|---|
+| Day 1 (fresh) | Volume, bounce, individual strand separation, slight frizz from drying method |
+| Day 2 | Flattened roots, oil at crown, texture more clumped, flyaways at temples |
+| Day 3 | Visible grease at part line, clumped texture, pulled back is more likely |
+| Post-workout | Damp at temples and nape, frizzy halo, pieces stuck to neck/face |
+| Hat hair | Flattened crown, indentation line, frizzy below the line |
 
-### Real Clothing
-- **Wrinkles** at elbows, collar, shoulder seams
-- **Fading** — especially at collar, cuffs, and where fabric stretches
-- **Pilling** — on sweaters, hoodies, knit fabrics
-- **Real fabric behavior** — drapes, pulls, bunches based on posture
-- **Slightly off-kilter** — collar twisted, one sleeve pushed up more than the other
+**Prompt language (Day 2):** "Day-two wavy hair with flattened oily roots at the crown, static flyaways at temples, clumped texture through mid-lengths, slight frizz halo, natural part slightly greasy."
 
-### AI Clothing
-- Perfectly pressed
-- No wrinkles or wear
-- Fabric looks painted on
-- Symmetrical draping
-- Brand-new appearance
+## Clothing — Fabric Physics
 
-## Posture & Body
+AI renders clothing as if it's painted on. Real fabric has:
+- **Gravity**: Pulls downward, creates diagonal tension folds toward anchor points
+- **Memory wrinkles**: At elbows, armpits, wherever fabric is repeatedly folded
+- **Wear patterns**: Fading at collar, pilling at cuffs, stretched neckline
+- **Thickness**: Visible at seams, hems, collar construction
 
-### Real Posture
-- **Slight asymmetry** — one shoulder higher, head tilted
-- **Relaxed** — not posed, not stiff. How you'd sit while scrolling your phone
-- **Natural weight distribution** — leaning slightly to one side
-- **Selfie arm angle** — one shoulder closer to camera (the arm holding the phone)
+**Prompt language:** "Wearing a washed, slightly pilled grey cotton hoodie with diagonal tension folds pulling toward the elevated right shoulder. Visible double-stitched hem, realistic fabric thickness at the collar, natural memory wrinkles at inner elbows. Subtle fade on high-friction shoulder seams."
 
-### AI Posture
-- Perfect upright posture
-- Symmetrical shoulders
-- Model-like pose
-- Too-deliberate head angles
+## Selfie Arm Biomechanics
 
-## Background
+The selfie arm creates a cascade of body adjustments AI ignores:
 
-### Real Backgrounds
-- **Contextual clutter** — a coffee cup, books, plants — not staged
-- **Slightly messy** — real homes aren't showrooms
-- **In focus** — iPhone deep DOF means background is sharp (not portrait mode)
-- **Mundane** — kitchen counter, bathroom mirror area, bedroom wall, office desk
-
-### AI Backgrounds
-- Too clean or too perfectly staged
-- Blurred (portrait mode is an instant AI tell)
-- Overly aesthetic
-- Nothing in the background at all (plain studio backdrop)
-
-## The 80/20 of Photorealism
-
-If you only remember five things:
-
-1. **Real skin texture** (pores, imperfections, uneven tone)
-2. **Natural light** (window or ambient, never studio)
-3. **Gaze off-center** (2-3° from camera)
-4. **Deep DOF** (everything in focus, no blur)
-5. **Worn-in clothes** (wrinkles, fading, real fabric)
-
-Get these five right and the avatar will pass as real 90% of the time.
+**Prompt language:** "Simulate one-handed selfie musculoskeletal posture: Right arm extended out of frame. Right shoulder distinctly elevated and rotated inward. Torso twisted 15 degrees off-axis to the left. Cervical spine tilts 5 degrees right to compensate. Sternocleidomastoid neck tendon visibly tense on one side. Slight slump in non-dominant shoulder."
